@@ -1,0 +1,116 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=1.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Configure a directory location for sections
+\newcommand*{\sectiondir}{resume/}
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     3rd party packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Needed to divide into several files
+\usepackage{import}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+\photo[circle,noedge,left]{clz}
+
+\name{Longzhu}{Cen}
+\address{212, School of Science, Harbin Institute of Technology, Xidazhi Street N0.92, Harbin 150001, China}
+\mobile{(+86) 189-4509-0930} 
+%%% Social
+\email{longzhucen@gmail.com}
+%%% Optionals
+%\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
+\quote{``Keep trying the right things."}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {\today}
+  {Longzhu Cen~~~·~~~Résumé}
+  {\thepage}
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader[R]
+
+%%% Import contents
+\import{\sectiondir}{education.tex}
+
+\cvsection{Research}
+\begin{cventries}
+\cventry
+    {}
+    {·~~~System research and signal processing method of photon counting lidar based on Gm-APD}
+    {}
+    {}
+    {}
+  \cventry
+    {}
+    {·~~~Quantum metrology: super-resolution and super-sensitive optical interferometer}
+    {}
+    {}
+    {}
+\end{cventries}
+
+\import{\sectiondir}{experience.tex}
+\import{\sectiondir}{publication.tex}
+\import{\sectiondir}{presentation.tex}
+
+\cvsection{Skills}
+\begin{cvskills}
+  \cvskill{Programming}{C, Matlab, Latex}
+  \cvskill{Software}{AutoCAD, Microsoft Office(Word, Powerpoint, Visio), Origin}
+  \cvskill{Language}{Chinese(Native speaker), English(IELTS 5.5)}
+\end{cvskills}
+
+\end{document}
